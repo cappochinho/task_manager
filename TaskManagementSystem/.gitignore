@@ -1,0 +1,67 @@
+# Ignore build results
+bin/
+obj/
+out/
+publish/
+artifacts/
+
+# Ignore user-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Ignore Rider and VS Code folders
+.idea/
+.vscode/
+
+# Ignore Visual Studio working folder
+.vs/
+
+# ASP.NET Core specific
+# Ignore runtime files, temp files, logs
+wwwroot/**/*.publish/
+wwwroot/**/*.cache/
+wwwroot/**/*.log
+logs/
+*.log
+
+# Configuration files that shouldn't be shared
+appsettings.Development.json
+secrets.json
+
+# Ignore local database files
+*.db
+*.mdf
+*.ldf
+*.ndf
+
+# Ignore test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.testsettings
+*.vsmdi
+
+# Ignore crash dumps and backups
+*.bak
+*.tmp
+
+# Ignore NuGet packages (but not source)
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+
+# Ignore Resharper and similar tooling artifacts
+_ReSharper*/
+*.DotSettings.user
+
+# Ignore EF Core Migrations snapshot files (optional - only if you auto-generate)
+# Migrations/*.cs
+
+# Ignore environment-specific files
+.env
+.env.*
