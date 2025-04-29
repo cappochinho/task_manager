@@ -1,6 +1,3 @@
-Here's an updated `README.md` with PostgreSQL setup instructions:
-
-```markdown
 # Task Manager Application
 
 A full-stack task management system with a .NET Web API backend, PostgreSQL database, and React frontend.
@@ -92,12 +89,3 @@ A full-stack task management system with a .NET Web API backend, PostgreSQL data
   ```
 - Ensure your connection string matches your PostgreSQL credentials
 - Check firewall settings if connecting remotely
-```
-
-This version:
-1. Adds comprehensive PostgreSQL setup instructions
-2. Includes database creation and user configuration
-3. Shows how to update the connection string
-4. Adds troubleshooting tips
-5. Maintains clear section separation
-6. Provides platform-specific instructions where needed
