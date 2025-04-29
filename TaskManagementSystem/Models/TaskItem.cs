@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace TaskManagementSystem.Models
 {
@@ -7,19 +8,29 @@ namespace TaskManagementSystem.Models
         public Guid Id { get; set; }
         
         [Required]
+        [JsonPropertyName("title")]
         public required string Title { get; set; }
         
+        [JsonPropertyName("description")]
         public string? Description { get; set; }
         
+        private DateTime _dueDate;
+    
         [Required]
-        public required DateTime DueDate { get; set; }
+        [JsonPropertyName("dueDate")]
+        public DateTime DueDate
+        {
+            get => _dueDate;
+            set => _dueDate = value.Kind == DateTimeKind.Unspecified 
+                ? DateTime.SpecifyKind(value, DateTimeKind.Utc)
+                : value.ToUniversalTime();
+        }
         
         [Required]
+        [JsonPropertyName("status")]
         public required string Status { get; set; }
         
-        [Required]
-        public required Guid CreatedByUserId { get; set; }
-        
-        public User? CreatedByUser { get; set; }
+        [JsonIgnore]
+        public Guid CreatedByUserId { get; set; }
     }
 }

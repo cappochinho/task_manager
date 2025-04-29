@@ -72,7 +72,6 @@ namespace TaskManagementSystem.Controllers
             if (existingTask == null)
                 return NotFound();
 
-            // Only allow updating Title, Description, DueDate, Status
             existingTask.Title = taskItem.Title;
             existingTask.Description = taskItem.Description;
             existingTask.DueDate = taskItem.DueDate;
